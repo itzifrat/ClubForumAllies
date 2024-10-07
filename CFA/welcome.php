@@ -1,5 +1,16 @@
-<!DOCTYPE html>
+<?php
+session_start();
+include_once('connection.php');
+
+// if(isset($_SESSION['name']) && isset($_SESSION['username'] )){
+
+// }
+$_SESSION['name'];
+$_SESSION['username'];
+?>
+<!doctype html>
 <html lang="en">
+
 
 <head>
     <meta charset="utf-8">
@@ -475,7 +486,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="page-sub-header">
-                                <h3 class="page-title">Welcome Admin!</h3>
+                                <h3 class="page-title">Welcome <span><?=$_SESSION['name'];?></span></h3>                
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item active">Admin</li>
